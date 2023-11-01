@@ -145,11 +145,15 @@ const editDialog = reactive<any>({});
 
 onBeforeMount(() => {
   getList();
-  goPlay(data.actived);
+  if (data.actived) {
+    goPlay(data.actived);
+  }
 });
 
 onMounted(() => {
-  play(data.actived);
+  if (data.actived) {
+    play(data.actived);
+  }
 });
 
 const getList = () => {
@@ -228,7 +232,9 @@ const onSave = () => {
 
 const goPlay = (item: any) => {
   if (data.actived?.url !== item.url) {
-    play(item);
+    setTimeout(() => {
+      play(item);
+    }, 100);
   }
   data.actived = item;
   localStorage.setItem('rtspPlaying', JSON.stringify(item));
