@@ -1,0 +1,489 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  overflow: overlay;
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.title,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--color-title);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+.bland {
+  color: var(--color-bland);
+}
+
+.flex {
+  display: flex;
+  &.column {
+    flex-direction: column;
+  }
+  &.middle {
+    align-items: center;
+  }
+  &.center {
+    justify-content: center;
+  }
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+}
+
+.flex-grow {
+  flex: 1;
+}
+
+.color {
+  color: var(--color);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.desc {
+  color: var(--color-desc);
+}
+
+.gray {
+  color: var(--color-gray);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.error {
+  color: var(--color-error);
+}
+
+.hover {
+  &:hover {
+    color: var(--color-primary);
+    cursor: pointer;
+  }
+}
+
+a {
+  color: var(--color-primary);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.hover {
+    text-decoration: none;
+    &:hover {
+      color: var(--color-primary-hover);
+    }
+  }
+}
+
+.outline-hover {
+  outline: 1px solid transparent;
+  &:hover,
+  &.hover {
+    outline-color: var(--color-highlight) !important;
+  }
+
+  &.active {
+    outline-color: var(--color-primary);
+  }
+}
+
+.ready-move > .dragable5le-wrapper {
+  pointer-events: none !important;
+}
+
+.button {
+  display: inline-block;
+  padding: 0 16px;
+  line-height: 2;
+  color: var(--color);
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  font-size: var(--font-size);
+
+  &.solid {
+    background-color: var(--color-background);
+    border-color: var(--color-background);
+
+    &:hover {
+      background-color: var(--color-border);
+      border-color: var(--color-border);
+    }
+
+    &.primary {
+      color: #ffffff !important;
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+
+      &:hover {
+        color: #ffffff !important;
+        text-decoration: none;
+        background-color: var(--color-primary-hover);
+        border-color: var(--color-primary-hover);
+      }
+    }
+
+    &.bland {
+      color: #ffffff !important;
+      background-color: var(--color-bland);
+      border-color: var(--color-bland);
+
+      &:hover {
+        color: #ffffff !important;
+        text-decoration: none;
+        background-color: var(--color-bland-hover);
+        border-color: var(--color-bland-hover);
+      }
+    }
+  }
+
+  &.primary {
+    color: var(--color-primary) !important;
+
+    &:hover {
+      color: var(--color-primary-hover) !important;
+    }
+  }
+
+  &.bland {
+    color: var(--color-bland) !important;
+
+    &:hover {
+      color: var(--color-bland-hover) !important;
+    }
+  }
+}
+
+.panel-info {
+  color: #1a44ca;
+  padding: 10px 16px;
+  background: #dbedff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  color: #ffffff;
+  background: var(--color-highlight);
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 400;
+  padding: 0 8px;
+  line-height: 1.5;
+}
+
+.group-left {
+  background-color: #ffffff;
+  border-right-color: transparent;
+  border-radius: 0;
+
+  &:hover {
+    border-right: 1px solid;
+  }
+}
+
+.group-right {
+  border-radius: 0;
+  .t-range-input {
+    border-radius: 0;
+  }
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 2px;
+  box-shadow: var(--shadow-panel);
+  padding: 20px;
+}
+
+[contenteditable]:focus {
+  outline: none;
+}
+
+.content-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  margin: -40px auto 0 auto;
+
+  img {
+    height: 50%;
+    max-height: 400px;
+    margin: -20px auto 0 auto;
+  }
+}
+
+.link {
+  display: flex;
+  input {
+    font-size: 10px;
+    flex-grow: 1;
+    border: 1px solid var(--color-border);
+    padding: 8px;
+    outline: none;
+    color: var(--color-desc);
+  }
+
+  button {
+    flex-shrink: 0;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 8px 12px;
+    &:hover {
+      background-color: var(--color-primary-hover);
+    }
+  }
+}
+
+
+.grid {
+  display: grid;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mt-4 {
+  margin-top: 4px;
+}
+
+.ml-4 {
+  margin-left: 4px;
+}
+
+.mr-4 {
+  margin-right: 4px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.-ml-8 {
+  margin-left: -8px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.ml-12 {
+  margin-left: 12px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.mx-12 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.ml-16 {
+  margin-left: 16px;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.ml-24 {
+  margin-left: 24px;
+}
+
+.px-4 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.py-4 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.pl-8 {
+  padding-left: 8px;
+}
+
+.px-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.px-12 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.p-12 {
+  padding: 12px;
+}
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.p-16 {
+  padding: 16px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.border {
+  border: 1px solid var(--color-sub-border);
+}
+
+.singe-line {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: nowrap;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/*滚动条里面小方块*/
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-scrollbar-hover);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}

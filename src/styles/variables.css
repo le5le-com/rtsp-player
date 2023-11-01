@@ -1,0 +1,56 @@
+:root {
+  --font-family: '-apple5le-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
+    'Hiragino Sans GB', 'Microsoft YaHei UI', ' Microsoft YaHei',
+    'Source Han Sans CN', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --font-size: 14px;
+  --color: #000000d9;
+  --color-title: #171b27;
+  --color-desc: #7f838c;
+  --color-gray: #bfbfbf;
+
+  --color-bland: #fb8501;
+  --color-bland-hover: #fa541c;
+
+  --color-primary: #4583ff;
+  --color-primary-hover: #0c56eb;
+  --color-primary-disabled: #bae7ff;
+  --color-primary-background: #4583ff18;
+  --color-success: #52c41a;
+  --color-success-hover: #3fad09;
+  --color-success-disabled: #c6ebb4;
+  --color-warning: #faad14;
+  --color-warning-hover: #d9a116;
+  --color-warning-disabled: #fff6dd;
+  --color-error: #f50000;
+  --color-error-hover: #f00;
+  --color-error-disabled: #ffc2c5;
+
+  --color-highlight: #fa541c;
+
+  --color-background: #f2f3f5;
+  --color-highlight-background: #4583ff28;
+  --color-editor-background: #f3f3f3;
+
+  --color-url: #4583ff;
+  --color-url-hover: #4583ff;
+  --color-border: #e5e5e5;
+  --color-sub-border: #f7f7f7;
+
+  --color-scrollbar: #dad7d7;
+  --color-scrollbar-hover: #e5e5e5;
+
+  --border-radius: 2px;
+
+  --td-brand-color: #4583ff;
+
+  --td-text-color-primary: #000000d9;
+
+  /* --td-bg-color-container-hover: #fafafa; */
+  --td-brand-color-focus: #4583ff28;
+
+  --shadow: 0px 2px 6px 0px rgba(0, 10, 38, 0.1);
+  --shadow-hover: 0px 4px 8px 0px rgba(0, 10, 38, 0.3);
+
+  --shadow-panel: 0px 2px 6px 0px rgb(0 10 38 / 4%);
+}
