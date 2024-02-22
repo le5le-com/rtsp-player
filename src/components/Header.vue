@@ -2,7 +2,7 @@
   <div class="app-header">
     <a class="logo" :href="enterprise.home" target="_blank">
       <img src="/logo.png" />
-      {{ enterprise.name }}
+      乐吾乐
     </a>
     <span class="mr-24 title"> - RTSP播放器 </span>
     <div class="flex-grow"></div>
@@ -13,7 +13,7 @@
       overlayClassName="custom-dropdown"
       style="margin-right: 32px"
     >
-      <a> 关于我们 <t-icon name="chevron-down" size="16" /></a>
+      <a> 帮助 <t-icon name="chevron-down" size="16" /></a>
       <t-dropdown-menu>
         <t-dropdown-item
           v-for="item in enterprise.helps"
